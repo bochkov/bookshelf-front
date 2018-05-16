@@ -2,7 +2,8 @@
     <div>
         <el-row :gutter="10" type="flex" justify="center">
             <el-col :xl="6" :lg="6" :md="6" :sm="8" >
-                <el-input placeholder="Искать в библиотеке" v-model="query" clearable></el-input>
+                <el-input placeholder="Искать в библиотеке" 
+                    @keyup.enter.native="search" v-model="query" clearable></el-input>
             </el-col>
             <el-col :span="2">
                 <el-button icon="el-icon-search" @click="search" circle></el-button>
@@ -37,9 +38,14 @@
                     axios.post('/api/search', this.query, {headers: {'Content-Type':'text/plain'}})
                         .then(data => {
                             this.clear();
-                            this.rows.push(...data.data);
+                            if (data.data.length === 0)
+                                this.msg('Ничего не найдено', 'warning');
+                            else
+                                this.rows.push(...data.data);
                         })
-                        .catch(error => this.msg(error, 'error'));
+                        .catch(() => {
+                            this.msg('Невозможно выполнить запрос', 'error');
+                        });
             },
             clear: function () {
                 this.rows.splice(0, this.rows.length);
