@@ -39,7 +39,7 @@
                             this.clear();
                             this.rows.push(...data.data);
                         })
-                        .catch(error => console.log(error));
+                        .catch(error => this.msg(error, 'error'));
             },
             clear: function () {
                 this.rows.splice(0, this.rows.length);
