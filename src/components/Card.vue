@@ -26,7 +26,6 @@
     }
 
     .box-card {
-        width: 250px;
         margin: 5px;
     }
 </style>

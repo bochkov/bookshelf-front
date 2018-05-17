@@ -1,16 +1,14 @@
 <template>
     <div>
         <el-row :gutter="10" type="flex" justify="center">
-            <el-col :xl="6" :lg="6" :md="6" :sm="8" >
-                <el-input placeholder="Искать в библиотеке" 
-                    @keyup.enter.native="search" v-model="query" clearable></el-input>
-            </el-col>
-            <el-col :span="2">
-                <el-button icon="el-icon-search" @click="search" circle></el-button>
+            <el-col :xl="2" :lg="8" :md="10" :sm="16" >
+                <el-input placeholder="Искать в библиотеке" class="search-field" size="small"
+                    v-model="query" clearable
+                    @clear="clear" @keyup.enter.native="search"></el-input>
             </el-col>
         </el-row>
         <el-row v-if="rows && rows.length">
-            <el-col v-for="(row) in rows" :key="row.id">
+            <el-col :span="8" v-for="(row) in rows" :key="row.id">
                 <Card :data=row></Card>
             </el-col>
         </el-row>
@@ -62,5 +60,7 @@
 </script>
 
 <style>
-
+.search-field {
+    margin-bottom: 20px;
+}
 </style>
