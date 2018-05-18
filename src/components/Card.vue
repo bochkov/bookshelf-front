@@ -9,23 +9,23 @@
 </template>
 
 <script>
-    export default {
-        name: 'Card',
-        props: ['data']
-    }
+export default {
+  name: "Card",
+  props: ["data"]
+};
 </script>
 
 <style>
-    .text {
-        font-size: 14px;
-        text-align: center;
-    }
+.text {
+  font-size: 14px;
+  text-align: center;
+}
 
-    .item {
-        padding: 5px 0;
-    }
+.item {
+  padding: 5px 0;
+}
 
-    .box-card {
-        margin: 5px;
-    }
+.box-card {
+  margin: 5px;
+}
 </style>

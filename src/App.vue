@@ -7,25 +7,25 @@
 </template>
 
 <script>
-    import Search from './components/Search'
+import Search from "./components/Search";
 
-    export default {
-        name: 'app',
-        components: {
-            Search
-        },
-    }
+export default {
+  name: "app",
+  components: {
+    Search
+  }
+};
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
-    #app {
-        font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+#app {
+  font-family: "Playfair Display", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    h3 {
-        text-align: center;
-    }
+h3 {
+  text-align: center;
+}
 </style>
