@@ -35,7 +35,7 @@ export default {
       else
         axios
           .post(
-            "https://ef0bbce2-8341-44da-a19e-6fce8e1fb474.mock.pstmn.io/api/search",
+            "/api/search",
             this.query,
             { headers: { "Content-Type": "text/plain" } }
           )
