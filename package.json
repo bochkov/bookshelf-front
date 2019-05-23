@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "element-ui": "^2.4.11",
-    "vue": "^2.5.21"
+    "element-ui": "^2.8.2",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.2",
-    "@vue/cli-plugin-eslint": "^3.2.2",
-    "@vue/cli-service": "^3.2.3",
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
     "vue-devtools": "^3.1.9",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.6.10"
   },
   "babel": {
     "presets": [
