@@ -35,7 +35,7 @@ export default {
       else
         axios
           .post(
-            "/api/search",
+            "/api/search/",
             this.query,
             { headers: { "Content-Type": "text/plain" } }
           )
